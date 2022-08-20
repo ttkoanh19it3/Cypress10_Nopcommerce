@@ -1,0 +1,10 @@
+version: '3'
+services:
+  cypress:
+    image: cypress/included
+    container_name: cypress-container
+    build: .
+    volumes:
+      - ./cypress:/app/cypress
+      - ./cypress.config.js:/app/cypress.config.js
+      - ./package.json:/app/package.json
